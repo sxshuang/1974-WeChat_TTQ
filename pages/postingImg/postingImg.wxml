@@ -1,0 +1,16 @@
+ <view class="postingImgContianer">
+    <view class="imgDescribe">
+        <label class="describeLb" for="describeTa">趣图描述：</label>
+        <textarea id="describeTa" class="describeTa" placeholder="请写下你的描述语" placeholder-style="font-size:13px;" bindblur="describeWord"></textarea>
+    </view>
+    <view class="previewArea">
+        <label class="describeLb">选择趣图：【最多四张哦】</label>
+        <view class="imgPreview">
+            <view wx:for="{{imgPath}}" wx:key="{{imgPath.path}}">
+                <image class="image" src="{{item.path}}" />
+            </view>
+        </view>
+        <button size="default" plain="true" type="default" bindtap="chooseImg" class="chooseButton">选择图片</button>
+    </view>
+    <button size="default" type="primary" bindtap="uploadImg" class="uploadButton">发帖</button>
+</view>

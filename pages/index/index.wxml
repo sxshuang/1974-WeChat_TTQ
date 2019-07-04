@@ -1,0 +1,4 @@
+<view class="indexContainer">
+  <!-- 引入趣图组件 -->
+  <img ImgData="{{ImgData}}" ></img>
+</view>

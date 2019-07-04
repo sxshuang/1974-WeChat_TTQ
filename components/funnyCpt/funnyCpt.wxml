@@ -1,0 +1,25 @@
+<!-- components/funny/funny.wxml -->
+<view class="panelBox" id="panelBox">
+  <view class="funnyCptContainer" wx:for="{{jokeInfoList}}" wx:key="{{jokeInfoList.id}}">
+    <!-- 头部 -->
+    <view class="header">
+      <image class="user_HeadImg" src="{{item.userHeadImg}}" lazy-load="true" catchtap="headerEvent"></image>
+      <text class="user_NickName">{{item.userNickName}}</text>
+    </view>
+    <!-- 标题+段子 -->
+    <view class="content">
+      <view class="funnyCptContent" id="funnyCptContentDetail">
+        {{item.jokeContent}}
+      </view>
+    </view>
+    <!-- 评论+点赞 -->
+    <view class="footer">
+      <view class="fa fa-commenting-o" catchtap="funnyDetail" data-id="{{item.id}}">
+        <text class="comment">评论：{{item.commentNum}}</text>
+      </view>
+      <view class="fa fa-thumbs-o-up" catchtap="likeEvent" data-id="{{item.id}}">
+        <text class="like">点赞：{{item.praisedNum}}</text>
+      </view>
+    </view>
+  </view>
+</view>

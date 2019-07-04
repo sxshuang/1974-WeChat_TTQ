@@ -1,0 +1,3 @@
+<view class="funnyContainer">
+    <funnyCpt jokeInfo="{{jokeInfoList}}"></funnyCpt>
+</view>
